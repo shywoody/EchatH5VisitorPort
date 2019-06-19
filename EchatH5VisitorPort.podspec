@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "EchatH5VisitorPort"
-  spec.version      = "0.0.1.2"
+  spec.version      = "0.0.1.3"
   spec.summary      = "be happy,my friend"
 
   # This description is used to generate tags and improve search results.
@@ -81,7 +81,7 @@ abdasdlwmas;ldkal;dksf;laksfoekfadfas;lasdfjafsa
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/shywoody/EchatH5VisitorPort", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/shywoody/EchatH5VisitorPort.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
