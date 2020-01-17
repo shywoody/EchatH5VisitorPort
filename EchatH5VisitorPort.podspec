@@ -139,7 +139,7 @@ abdasdlwmas;ldkal;dksf;laksfoekfadfas;lasdfjafsa
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
-spec.dependency 'AFNetworking','~> 3.1'
+spec.dependency 'AFNetworking','~> 3.0'
 spec.dependency 'SDWebImage','~> 4.4.8'
 spec.dependency 'SSZipArchive'
 end
