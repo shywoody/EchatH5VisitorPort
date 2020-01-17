@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
 
-  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  # ―――  Spec Metaxcconfigdata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  These will help people to find your library, and whilst it
   #  can feel like a chore to fill in it's definitely to your advantage. The
@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "EchatH5VisitorPort"
-  spec.version      = "0.0.1.8"
+  spec.version      = "0.0.1.9"
   spec.summary      = "be happy,my friend"
 
   # This description is used to generate tags and improve search results.
