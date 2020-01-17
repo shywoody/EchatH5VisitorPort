@@ -123,7 +123,7 @@ abdasdlwmas;ldkal;dksf;laksfoekfadfas;lasdfjafsa
 
   # spec.framework  = "SomeFramework"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
-  spec.frameworks = "Foundation","UIKit"
+  spec.frameworks = "Foundation","UIKit","CoreServices"
   spec.libraries = "stdc++", "z","c++","icucore"
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
