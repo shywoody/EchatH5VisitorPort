@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class Echat_accessConditions;
-@class Echat_LocationVC;
+@class EchatVideoModel;
 
 typedef void(^VisEvtCallBack)(NSString * data);
 @interface EchatViewController : UIViewController
@@ -20,7 +20,7 @@ typedef void(^VisEvtCallBack)(NSString * data);
 
 
 //自定义地图控制器
-@property(nonatomic,strong) Echat_LocationVC *  mapLoaderViewController;
+@property(nonatomic,strong) UIViewController *  mapLoaderViewController;
 
 ///自定义图库控制器
 @property(nonatomic,strong) UIViewController * imagePickerLoaderViewController;
@@ -32,7 +32,11 @@ typedef void(^VisEvtCallBack)(NSString * data);
 ///构造函数
 -(instancetype)initWithAccess:(Echat_accessConditions *)access;
 
-
+/**
+ * @brief 打开链接方法
+ * @param info url参数包含地址和类型
+ */
+-(void)echat_OpenUrl:(NSDictionary * )info;
 //---------------------------------------------------------------------自定义接口 
 /**
  * @brief 图片预览功能接管
@@ -47,9 +51,9 @@ typedef void(^VisEvtCallBack)(NSString * data);
 
 /**
  * @brief 视频播放接管
- * @param path  可能是fileUrl也可能是远程地址
+ * @param model  可能是fileUrl也可能是远程地址
  */
--(void)echat_playVideo:(NSURL *)path;
+-(void)echat_bridge4playVideo:(EchatVideoModel *)model;
 
 /**
  * @brief 相机接管
@@ -60,6 +64,12 @@ typedef void(^VisEvtCallBack)(NSString * data);
  * @brief 相册接管
  */
 -(void)echat_imagePicker;
+
+/**
+ * @brief 打开链接
+ * @param  info 地址参数
+ */
+-(void)echat_OpenLink:(NSDictionary *)info;
 
 //--------------------------------------------------------------------上传
 
@@ -81,6 +91,8 @@ typedef void(^VisEvtCallBack)(NSString * data);
  * @param  asset 为PHAsset或是ALAsset资源
  */
 -(void)echat_upLoadVideoWithCoverImage:(UIImage *)coverImage andVideoAsset:(id)asset;
+
+
 @end
 
 

@@ -8,25 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "EchatSDK.h"
-#define WEB [[NSUserDefaults standardUserDefaults]objectForKey:@"WEB"]
-
-///h5页面地址
 UIKIT_EXTERN NSString * const EchatWebUrl;
 
-///DBName
 UIKIT_EXTERN NSString * const EchatDBFileName;
 
-///WSMessage --- tableName
 UIKIT_EXTERN NSString * const EchatWSMessageTableName;
 
-///TalkID --- tableName
 UIKIT_EXTERN NSString * const EchatTalkIdTableName;
 
 UIKIT_EXTERN NSString * const EchatConfigureTableName;
 
 UIKIT_EXTERN NSString * const EchatStaffsTableName;
 
-//noti
+UIKIT_EXTERN NSString * const EchatLocalRuleTableName;
+
 UIKIT_EXTERN NSString * const Echat_CloseChat;
 
 UIKIT_EXTERN NSString * const Echat_EndHistoryFromDBNoti;
@@ -35,12 +30,13 @@ UIKIT_EXTERN NSString * const Echat_NetStatusNoti;
 
 UIKIT_EXTERN NSString * const Echat_ReconnectWSNoti;
 
-//perferance
 UIKIT_EXTERN NSString * const Echat_AppID;///appId
 
 UIKIT_EXTERN NSString * const Echat_AppSecret;///appSecret
 
 UIKIT_EXTERN NSString * const Echat_encryptVID;///encryptVID
+
+UIKIT_EXTERN NSString * const Echat_companyId;///companyId
 
 UIKIT_EXTERN NSString * const Echat_messageGroupId;///messageGroupId
 
@@ -63,6 +59,22 @@ UIKIT_EXTERN NSString * const Echat_isReceive10009;///是否收到10009消息
 UIKIT_EXTERN NSString * const Echat_isEnterBackGround;//是否退到后台
 
 UIKIT_EXTERN NSString * const Echat_unReadcount;
+
+UIKIT_EXTERN NSString * const EchatlocalVersion;
+
+UIKIT_EXTERN NSString * const EchatHtmlLocalVersion;
+
+UIKIT_EXTERN NSString * const EchatUnReadVersion;
+
+UIKIT_EXTERN NSString * const Echat_Crash;
+
+UIKIT_EXTERN NSString * const Echat_apiServerDomain;
+
+UIKIT_EXTERN NSString * const Echat_uploadOverSize;
+
+UIKIT_EXTERN NSString * const Echat_lastMsg;
+
+
 //fucName2H5
 UIKIT_EXTERN NSString * const Echat_Fuc_getMessage;
 UIKIT_EXTERN NSString * const Echat_Fuc_msgFromDB;
@@ -124,13 +136,18 @@ typedef NS_ENUM (NSInteger, EChatBizStatus) {
 //偏好
 #define EchatPerference [NSUserDefaults standardUserDefaults]
 
+//本地化
+#define EchatLocalized(x) [NSBundle Echat_localizedStringForKey:x]
+
 //回到主线程
+#ifndef Echat_dispatch_main_async_safe
 #define Echat_dispatch_main_async_safe(block)\
-if ([NSThread isMainThread]) {\
+if (strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queue_get_label(dispatch_get_main_queue())) == 0) {\
 block();\
 } else {\
 dispatch_async(dispatch_get_main_queue(), block);\
 }
+#endif
 
 #define EchatDebug [EchatSDK share].openDebug
 #ifdef DEBUG

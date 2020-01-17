@@ -19,9 +19,12 @@ FOUNDATION_EXPORT const unsigned char EchatVisitorPortVersionString[];
 #import "EchatSDK.h"
 #import "EchatViewController.h"
 #import "Echat_accessConditions.h"
+#import "EchatVideoModel.h"
+#import "EchatNavController.h"
+
 //#import "EchatWSManager.h"
 #import "EchatWebSocket.h"
-#import "Echat_unReadMsg.h"
+#import "Echat_MsgModel.h"
 #import "EchatInfo.h"
 
 //#if __has_include(<SDWebImage/UIImageView+WebCache.h>)

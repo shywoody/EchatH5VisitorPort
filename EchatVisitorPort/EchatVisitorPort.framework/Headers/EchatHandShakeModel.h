@@ -33,14 +33,18 @@
 @property (nonatomic,strong) EchatRouteEntranceInfoModel  * routeEntranceInfo;
 @property(nonatomic,strong) NSString * i18nConfig;
 @property (nonatomic,copy) NSString  * sessionId;
-@property (nonatomic,assign) NSInteger   tm;
+@property (nonatomic,assign) double   tm;
 @property (nonatomic,copy) NSString  * unreadMsgRule;///未读消息规则
-@property (nonatomic,assign) NSInteger   uploadFileSize;///文件上传大小限制
+@property (nonatomic,assign) NSUInteger   uploadFileSize;///文件上传大小限制
 @property (nonatomic,copy) NSString  * uploadFileType;//文件上传格式
 @property (nonatomic,assign) NSInteger vcs;
 @property (nonatomic,copy) NSString  * visitorId;
 @property (nonatomic,assign) NSInteger  visitorSessionSize;
 @property (nonatomic,assign) NSInteger  visitorType;
+@property(nonatomic,copy) NSString * sdkHtmlUpdateInterval;
+@property(nonatomic,assign) BOOL sdkHtmlForceUpdate;
+@property(nonatomic,copy) NSString * sdkHtmlversion;
+
 @end
 
 
