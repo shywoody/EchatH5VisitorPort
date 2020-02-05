@@ -8,7 +8,6 @@
 
 //图文消息
 #import <Foundation/Foundation.h>
-#import "EchatModel.h"
 @interface Echat_visEvtModel : NSObject<NSCoding>
 @property (nonatomic,copy) NSString  * content;
 @property (nonatomic,strong) NSNumber * customizeMsgType;

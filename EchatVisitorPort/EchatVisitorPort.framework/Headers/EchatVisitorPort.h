@@ -16,35 +16,32 @@ FOUNDATION_EXPORT const unsigned char EchatVisitorPortVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <EchatVisitorPort/PublicHeader.h>
 
+
+//SDK功能
 #import "EchatSDK.h"
+
+//对话控制器
 #import "EchatViewController.h"
+
+//对话参数模型
 #import "Echat_accessConditions.h"
+
+//图文消息模型
+#import "Echat_visEvtModel.h"
+
+//播发视频模型
 #import "EchatVideoModel.h"
+
 #import "EchatNavController.h"
 
-//#import "EchatWSManager.h"
-#import "EchatWebSocket.h"
+//消息模型
 #import "Echat_MsgModel.h"
+
+//订阅频道模型
+#import "EchatSubscribeMsgModel.h"
+
 #import "EchatInfo.h"
 
-//#if __has_include(<SDWebImage/UIImageView+WebCache.h>)
-//#import <SDWebImage/UIImageView+WebCache.h>
-//#import <SDWebImage/UIView+WebCache.h>
-//#import <SDWebImage/SDWebImageManager.h>
-//#import <SDWebImage/SDImageCacheConfig.h>
-//#import <SDWebImage/UIImage+MultiFormat.h>
-//#else
-//#import "UIImageView+WebCache.h"
-//#import "SDWebImageManager.h"
-//#import "UIView+WebCache.h"
-//#import "SDImageCacheConfig.h"
-//#import "UIImage+MultiFormat.h"
-//#endif
-//#if __has_include(<AFNetworking/AFNetworking.h>)
-//#import <AFNetworking/AFNetworking.h>
-//#else
-//#import "AFNetworking.h"
-//#endif
 
 
 

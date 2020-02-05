@@ -16,7 +16,7 @@
 @class Echat_visEvtModel;
 
 typedef void(^UnReadMsgBlock)(Echat_MsgModel * unReadMsg);
-typedef void(^LastMsgBlock)(Echat_MsgModel * unReadMsg);
+typedef void(^LastMsgBlock)(Echat_MsgModel * model);
 typedef void(^UnReadMsgCountBlock)(NSUInteger count);
 typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 
@@ -90,13 +90,13 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 * @brief 动态获取未读消息。(用于开发者自行接管推送)
 * @param callBack 回调动态返回msgmodel
 */
-+(void)getUnReadMsgCallBack:(UnReadMsgBlock)callBakc;
++(void)getUnReadMsgCallBack:(UnReadMsgBlock)callBack;
 
 
 /**
 * @brief 订阅消息
 * @param type 选择订阅的消息类型,目前只支持排队信息的订阅
-* @param callBack 回调动态返回subScribeMsgmodel
+* @param complete 回调动态返回subScribeMsgmodel
 */
 +(void)subscribeMessageByMsgType:(EchatSubscribeMsgType)type Complete:(SubscribeMsgCountBlock)complete;
 

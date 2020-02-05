@@ -152,7 +152,7 @@ dispatch_async(dispatch_get_main_queue(), block);\
 #define EchatDebug [EchatSDK share].openDebug
 #ifdef DEBUG
 #define EchatLog(fmt, ...)  if(EchatDebug) {\
-NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);\
+NSLog((@"ECHATLOG--> %s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);\
 }else {}
 #else
 #define EchatLog(...)

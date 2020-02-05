@@ -12,7 +12,7 @@ typedef NS_OPTIONS(NSUInteger, Echat_MsgType){
     EchatVisitorMsgType = 1 << 0,    //访客发送消息
     EchatCustomerMsgType = 1 << 1,   //客服消息
     EchatSystemMsgType = 1 << 2,     //系统消息
-    EchatAllType = 1 << 3            //所有类型
+    EchatAllMsgType = 1 << 3,     //所有类型
 };
 
 @interface Echat_MsgModel : NSObject

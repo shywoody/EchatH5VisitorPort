@@ -4,33 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/EchatClassInfo.h</key>
-		<data>
-		m6Woo3xwLG4xBZMHZgyYa6n8lwU=
-		</data>
-		<key>Headers/EchatHandShakeModel.h</key>
-		<data>
-		rV5JvIXkLCYH95aqKQgEPxhGDWE=
-		</data>
 		<key>Headers/EchatInfo.h</key>
 		<data>
-		Zz4JNCHKZj8uZzT8OosOVREP6C4=
-		</data>
-		<key>Headers/EchatModel.h</key>
-		<data>
-		zQVPPaSrlywMYsSV3jxkfTxlLM8=
+		btP4eu9mchQmkqPLa5ueqcJLSXs=
 		</data>
 		<key>Headers/EchatNavController.h</key>
 		<data>
 		okcbLs+IovuarkIO2P7WTARIeIM=
 		</data>
-		<key>Headers/EchatRouteEntranceInfoModel.h</key>
-		<data>
-		n4DRwWQHdTVQy5LKV70PprHgh1o=
-		</data>
 		<key>Headers/EchatSDK.h</key>
 		<data>
-		GafFTRG9BwcEpZjiJ0unqrDexEY=
+		OObLq70oji0mogNIpCCYchjXOds=
 		</data>
 		<key>Headers/EchatSubscribeMsgModel.h</key>
 		<data>
@@ -46,15 +30,11 @@
 		</data>
 		<key>Headers/EchatVisitorPort.h</key>
 		<data>
-		AERVFUm4r3R9+h6Zl33kCc9wykE=
-		</data>
-		<key>Headers/EchatWebSocket.h</key>
-		<data>
-		rnk7xeOB97dLV2zQZwTIdHxSplc=
+		3pg/hgL+GOYqNe4DM2IC6szDAIw=
 		</data>
 		<key>Headers/Echat_MsgModel.h</key>
 		<data>
-		1EoWu+6rr3kZG1Zq+MO8yAwGqcE=
+		afahIGHY/TZxZj8lblJJWLFoMNs=
 		</data>
 		<key>Headers/Echat_accessConditions.h</key>
 		<data>
@@ -62,11 +42,7 @@
 		</data>
 		<key>Headers/Echat_visEvtModel.h</key>
 		<data>
-		n3kwBheP1bFuABVFAVNYUdUIx/I=
-		</data>
-		<key>Headers/NSObject+EchatModel.h</key>
-		<data>
-		4mF1oE0VJ72nbLmXJCEMJREwpLM=
+		8DvuL/xJLWXMsQ4UVUzEXuxQzCA=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -75,48 +51,15 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/EchatClassInfo.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			m6Woo3xwLG4xBZMHZgyYa6n8lwU=
-			</data>
-			<key>hash2</key>
-			<data>
-			SKfgEHypZJ8ElJ000+a5Ourt0mWE2S3PzUJnGpj3Z/A=
-			</data>
-		</dict>
-		<key>Headers/EchatHandShakeModel.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rV5JvIXkLCYH95aqKQgEPxhGDWE=
-			</data>
-			<key>hash2</key>
-			<data>
-			z6rVEsZt3C5C1SCpRDJdBeZHoO/3IcG0l0qPAh7pkTs=
-			</data>
-		</dict>
 		<key>Headers/EchatInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Zz4JNCHKZj8uZzT8OosOVREP6C4=
+			btP4eu9mchQmkqPLa5ueqcJLSXs=
 			</data>
 			<key>hash2</key>
 			<data>
-			6RH6h3D9NeJADMIJdr1TSeiVnihlVbmWi3kDVIPxWbg=
-			</data>
-		</dict>
-		<key>Headers/EchatModel.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			zQVPPaSrlywMYsSV3jxkfTxlLM8=
-			</data>
-			<key>hash2</key>
-			<data>
-			ck663TDvIzs0xwqI+yL+M18ZDayNZDxDTR1SjyrkHzM=
+			38/SG7nqJRJqgm48dQiC9wh1syBAjS/Z2cmAuxMbeHc=
 			</data>
 		</dict>
 		<key>Headers/EchatNavController.h</key>
@@ -130,26 +73,15 @@
 			iS2dYMHepSbb5rnQmlBf9lZRJwbQX8FKxg3QsuP+x2M=
 			</data>
 		</dict>
-		<key>Headers/EchatRouteEntranceInfoModel.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			n4DRwWQHdTVQy5LKV70PprHgh1o=
-			</data>
-			<key>hash2</key>
-			<data>
-			1ODU0TiqPz70NBlNuEWbsMhLMEIvHUw4As4yO7dTZHw=
-			</data>
-		</dict>
 		<key>Headers/EchatSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GafFTRG9BwcEpZjiJ0unqrDexEY=
+			OObLq70oji0mogNIpCCYchjXOds=
 			</data>
 			<key>hash2</key>
 			<data>
-			d+cdcWl1/UAOv6OqdYMXcUmOBseMlVgsV/TgTJrx3nA=
+			JQHY1e68B8EforJPEqb9Jl7P45qpdhVLWedW5Nr9QBw=
 			</data>
 		</dict>
 		<key>Headers/EchatSubscribeMsgModel.h</key>
@@ -189,33 +121,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AERVFUm4r3R9+h6Zl33kCc9wykE=
+			3pg/hgL+GOYqNe4DM2IC6szDAIw=
 			</data>
 			<key>hash2</key>
 			<data>
-			3MePHk0Pt+Hxzf7p9+Z48IGWYCt8R0LJwXcEyOnhy38=
-			</data>
-		</dict>
-		<key>Headers/EchatWebSocket.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rnk7xeOB97dLV2zQZwTIdHxSplc=
-			</data>
-			<key>hash2</key>
-			<data>
-			glBge7OnItGPQsW5lHmE71thccnzhikuzoqNHfRV0Co=
+			JKT/z/ako3ZrrAEGfv2dUKMIw6nCOFHaCb9CPUzmpGo=
 			</data>
 		</dict>
 		<key>Headers/Echat_MsgModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1EoWu+6rr3kZG1Zq+MO8yAwGqcE=
+			afahIGHY/TZxZj8lblJJWLFoMNs=
 			</data>
 			<key>hash2</key>
 			<data>
-			5DU3VqI8uadKZco9nwQQNSxBlEsiIug3STt4wZakV0s=
+			m6CcA0Rf0M/7G2GtXCUiopGJux7f1wrke043Vd2ecGI=
 			</data>
 		</dict>
 		<key>Headers/Echat_accessConditions.h</key>
@@ -233,22 +154,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			n3kwBheP1bFuABVFAVNYUdUIx/I=
+			8DvuL/xJLWXMsQ4UVUzEXuxQzCA=
 			</data>
 			<key>hash2</key>
 			<data>
-			4/VWT342ccr2fj45uaiAlKT6W54xd+e2iWb7oiEdkzg=
-			</data>
-		</dict>
-		<key>Headers/NSObject+EchatModel.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			4mF1oE0VJ72nbLmXJCEMJREwpLM=
-			</data>
-			<key>hash2</key>
-			<data>
-			SsgeC+untejz/UJScdXd5EzFjcNCOko0zeWhJoxY7Ws=
+			pQdGbEIugKjkW0rCdKZFO7ltGquhjCwOPxpl4znz500=
 			</data>
 		</dict>
 	</dict>
