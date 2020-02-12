@@ -53,7 +53,7 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 * @param deviceToken 如果需要Echat来推送未读消息需要调用该方法传入Token
 * @param istp 是否是三方推送
 */
-+(void)echat_registPushInfo:(NSData *)deviceToken isThirdPush:(BOOL)istp;
++(void)echat_registPushInfo:(NSData *)deviceToken;
 
 
 /**
@@ -116,10 +116,17 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 
 
 /**
-* @brief 远程推送含有未读消息总数的处理
+* @brief 远程推送消息处理(Echat接管)
 * @param info 远程推送需要传入info用于更精准的读取未读消息数
 */
 +(void)increaseunReadCountWithRemoteInfo:(NSDictionary *)info;
+
+/**
+* @brief 远程推送消息处理(客户服务器接管)
+* @param jsonString 为Echat推送给客户服务器的echatNotifyData属性字段
+* @param content 为Echat推送给客户服务器的远程推送消息内容
+*/
++(void)increaseunReadCountWithEchatNotifyDataJsonString:(NSString *)jsonString andContent:(NSString * )content;
 
 
 /**
@@ -137,6 +144,13 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 * @param complete 成功回调
 */
 +(void)echat_getUnReadMsgCountWithMetaData:(NSString * )metaData Complete:(void (^)(NSInteger count))complete;
+
+/**
+* @brief 匿名访客转VIP
+* @param metaStr 会员信息加密字符串
+* @param myDataStr 额外业务参数
+*/
++(void)echat_registMetaData:(NSString *)metaStr myData:(NSString *)myDataStr;
 
 /**
 * @brief 获取当前控制器(Echat用于远程推送点击跳转示例方法)
