@@ -32,6 +32,7 @@ FOUNDATION_EXPORT const unsigned char EchatVisitorPortVersionString[];
 //播发视频模型
 #import "EchatVideoModel.h"
 
+//导航控制器
 #import "EchatNavController.h"
 
 //消息模型
@@ -39,6 +40,9 @@ FOUNDATION_EXPORT const unsigned char EchatVisitorPortVersionString[];
 
 //订阅频道模型
 #import "EchatSubscribeMsgModel.h"
+
+//WKWeb打开url视图
+#import "EchatURLDisplayView.h"
 
 #import "EchatInfo.h"
 

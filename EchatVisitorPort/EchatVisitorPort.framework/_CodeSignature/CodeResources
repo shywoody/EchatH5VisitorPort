@@ -20,6 +20,10 @@
 		<data>
 		8fxAJpCCRQXDTQNHJVDJHdhQMug=
 		</data>
+		<key>Headers/EchatURLDisplayView.h</key>
+		<data>
+		ejse5GiiUaOd/HPLBY2xhRksQ6Q=
+		</data>
 		<key>Headers/EchatVideoModel.h</key>
 		<data>
 		cMJQwmVz/yca905GMdxTFpBa9X8=
@@ -30,7 +34,7 @@
 		</data>
 		<key>Headers/EchatVisitorPort.h</key>
 		<data>
-		3pg/hgL+GOYqNe4DM2IC6szDAIw=
+		x8HDiFjV5Pkwr00+ZzwreM+hrXc=
 		</data>
 		<key>Headers/Echat_MsgModel.h</key>
 		<data>
@@ -95,6 +99,17 @@
 			8LsK9l0wu+fTeTT9/SB8GUAGlpBUSmS01nKgXA1lOK8=
 			</data>
 		</dict>
+		<key>Headers/EchatURLDisplayView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ejse5GiiUaOd/HPLBY2xhRksQ6Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZE9JSP1sc0xafOzOzZ7cT1VNkWkstCYlYQ4hUSmRpLc=
+			</data>
+		</dict>
 		<key>Headers/EchatVideoModel.h</key>
 		<dict>
 			<key>hash</key>
@@ -121,11 +136,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3pg/hgL+GOYqNe4DM2IC6szDAIw=
+			x8HDiFjV5Pkwr00+ZzwreM+hrXc=
 			</data>
 			<key>hash2</key>
 			<data>
-			JKT/z/ako3ZrrAEGfv2dUKMIw6nCOFHaCb9CPUzmpGo=
+			YbuVDOroTqU+68W/Bl+efZF9rTnUGeEC8EDiQQdDMAo=
 			</data>
 		</dict>
 		<key>Headers/Echat_MsgModel.h</key>
