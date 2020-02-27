@@ -93,6 +93,17 @@ typedef void(^VisEvtCallBack)(NSString * data);
 -(void)echat_upLoadVideoWithCoverImage:(UIImage *)coverImage andVideoAsset:(id)asset;
 
 
+/**
+ * @brief 切换路由
+ * @param echatTag 路由名称
+ */
+-(void)startOtherRouteChat:(NSString *)echatTag;
+
+/**
+* @brief 关闭当前对话
+*/
+-(void)echat_endConversation;
+
 @end
 
 
