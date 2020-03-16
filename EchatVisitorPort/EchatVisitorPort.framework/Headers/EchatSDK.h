@@ -43,15 +43,14 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 
 /**
 * @brief 上传gif
-* @param isClose 是否关闭位置信息功能,需要引用EchatCommen和引入高德地图
+* @param isOpen 是否关闭位置信息功能,需要引用EchatCommen和引入高德地图
 */
-+(void)echat_OpenDefaultLocationFunction:(BOOL)isClose;
++(void)echat_OpenDefaultLocationFunction:(BOOL)isOpen;
 
 
 /**
 * @brief 远程推送注入token
 * @param deviceToken 如果需要Echat来推送未读消息需要调用该方法传入Token
-* @param istp 是否是三方推送
 */
 +(void)echat_registPushInfo:(NSData *)deviceToken;
 
