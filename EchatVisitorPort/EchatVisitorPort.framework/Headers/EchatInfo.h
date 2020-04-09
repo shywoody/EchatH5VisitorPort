@@ -42,6 +42,8 @@ UIKIT_EXTERN NSString * const Echat_messageGroupId;///messageGroupId
 
 UIKIT_EXTERN NSString * const Echat_talkId;///talkId
 
+UIKIT_EXTERN NSString * const Echat_talkType;///talkType
+
 UIKIT_EXTERN NSString * const Echat_mid; ///mid
 
 UIKIT_EXTERN NSString * const Echat_visitorId;///用户id
