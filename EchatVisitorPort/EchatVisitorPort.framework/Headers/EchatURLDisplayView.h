@@ -35,4 +35,8 @@ typedef enum : NSUInteger {
 
 ///构造
 - (instancetype)initWithUrlString:(NSString *)urlString expandType:(EchatDisplayVisEvtViewExpandType)Type;
+
+///打开预览页面
+-(void)echat_bridge4PreviewImage:(NSDictionary *)dict;
+
 @end
