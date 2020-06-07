@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "EchatH5VisitorPort"
-  spec.version      = "1.0.2.7"
+  spec.version      = "1.0.2.8"
   spec.summary      = "be happy,my friend"
 
   # This description is used to generate tags and improve search results.
@@ -137,8 +137,8 @@ abdasdlwmas;ldkal;dksf;laksfoekfadfas;lasdfjafsa
 
    spec.requires_arc = true
 
-  # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-spec.dependency 'AFNetworking'
+# spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+# spec.dependency 'AFNetworking'
 # spec.dependency 'SDWebImage','~> 4.4.8'
 spec.dependency 'SDWebImage'
 spec.dependency 'SSZipArchive'
