@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/EchatInfo.h</key>
 		<data>
-		qh+PoZ+5xHyQZF9Buqt5LTPWZTc=
+		dr0CXrp+mwkmpBFn2sNrCACmUV4=
 		</data>
 		<key>Headers/EchatNavController.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/EchatViewController.h</key>
 		<data>
-		2iJegriEJLFwDIxmfaAjjjH0+BU=
+		qy1LaKjBzAZp+tABwhBDG7wSDsQ=
 		</data>
 		<key>Headers/EchatVisitorPort.h</key>
 		<data>
@@ -59,11 +59,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qh+PoZ+5xHyQZF9Buqt5LTPWZTc=
+			dr0CXrp+mwkmpBFn2sNrCACmUV4=
 			</data>
 			<key>hash2</key>
 			<data>
-			OMkdCVZdSjZ6uhI+rXkiiIkK7+I5vHBMsoRbuvIfvLQ=
+			y1N1mmWM4l3FziQtcBAjpm8qTfs0E9TOaD3czow8sJY=
 			</data>
 		</dict>
 		<key>Headers/EchatNavController.h</key>
@@ -125,11 +125,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2iJegriEJLFwDIxmfaAjjjH0+BU=
+			qy1LaKjBzAZp+tABwhBDG7wSDsQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			yI4C79EZhGwhTF6X3wgnTjX8HRY0ZBcDOHa0p6SPml4=
+			xo/7llOK+DUQsGrCZ24+vJoa1fN1WsdC9sZtG5HQRfs=
 			</data>
 		</dict>
 		<key>Headers/EchatVisitorPort.h</key>

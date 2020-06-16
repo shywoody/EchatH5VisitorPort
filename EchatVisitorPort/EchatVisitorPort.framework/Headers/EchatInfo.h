@@ -151,12 +151,16 @@ dispatch_async(dispatch_get_main_queue(), block);\
 #endif
 
 #define EchatDebug [EchatSDK share].openDebug
-#ifdef RELEASE
+//#ifdef DEBUG
+//#define EchatLog(fmt, ...)  if(EchatDebug) {\
+//NSLog((@"ECHATLOG--> %s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);\
+//}else {}
+//#else
+//#define EchatLog(...)
+//#endif
+
 #define EchatLog(fmt, ...)  if(EchatDebug) {\
-NSLog((@"ECHATLOG--> %s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);\
+NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);\
 }else {}
-#else
-#define EchatLog(...)
-#endif
 
 

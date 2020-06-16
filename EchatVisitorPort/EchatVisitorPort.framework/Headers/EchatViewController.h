@@ -100,9 +100,16 @@ typedef void(^VisEvtCallBack)(NSString * data);
 -(void)startOtherRouteChat:(NSString *)echatTag;
 
 /**
+* @brief 控制器返回
+*/
+-(void)back;
+
+/**
 * @brief 关闭当前对话
 */
 -(void)echat_endConversation;
+
+
 
 @end
 
