@@ -185,4 +185,5 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 */
 +(void)logout;
 
+
 @end
