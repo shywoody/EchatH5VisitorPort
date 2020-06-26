@@ -176,8 +176,10 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 
 /**
 * @brief 关闭连接
+* @param complele 成功回调
+* @param fail 失败回调
 */
-+(void)closeConnect;
++(void)closeCurrentConversationComplete:(dispatch_block_t)complele failure:(dispatch_block_t)fail;
 
 
 /**
