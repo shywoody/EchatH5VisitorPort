@@ -107,7 +107,7 @@ typedef void(^VisEvtCallBack)(NSString * data);
 /**
 * @brief 关闭当前对话
 */
--(void)echat_endConversation;
+-(void)echat_endConversationComplete:(dispatch_block_t)complete failure:(dispatch_block_t)fail;
 
 
 
