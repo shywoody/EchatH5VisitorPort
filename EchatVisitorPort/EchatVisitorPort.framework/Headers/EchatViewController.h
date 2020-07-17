@@ -68,8 +68,9 @@ typedef void(^VisEvtCallBack)(NSString * data);
 /**
  * @brief 打开链接
  * @param  info 地址参数
+ * @return 返回yes是开发者接管,返回no是SDK接管
  */
--(void)echat_OpenLink:(NSDictionary *)info;
+-(BOOL)echat_OpenLink:(NSDictionary *)info;
 
 //--------------------------------------------------------------------上传
 

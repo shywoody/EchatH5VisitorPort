@@ -12,6 +12,9 @@
 ///会员数据参数
 @property (nonatomic,copy) NSString  * metaData;
 
+///唯一标识,传入metaData一定要传Uid和metaData对应
+@property (nonatomic,copy) NSString * uid;
+
 ///自定义扩展参数
 @property (nonatomic,copy) NSString  * myData;
 
@@ -31,7 +34,5 @@
 ///咨询入口id
 @property (nonatomic,copy) NSString * routeEntranceId;
 
-///机器人接入策略
-//@property (nonatomic,assign) int rbPlicy;
 
 @end

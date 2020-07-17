@@ -33,6 +33,13 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 */
 +(void)AppID:(NSString *)appid AppSecret:(NSString *)appsecret;
 
+/**
+* @brief 私有云用户初始化
+* @param appid appId
+* @param appsecret appsecret
+* @param server 私有云服务器地址字符串 例如:https://xxxx.xxxx.com
+*/
++(void)AppID:(NSString *)appid AppSecret:(NSString *)appsecret server:(NSString *)server;
 
 /**
 * @brief 关闭默认推送UI
@@ -129,20 +136,35 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 
 
 /**
-* @brief 发送图文
+* @brief 发送图文(过期)
 * @param model 图文消息模型
 * @param metaData 如果有会员信息需要传入metaData如果没可以传nil
 * @param complete 成功回调
 * @param failure 失败回调
 */
-+(void)echat_sendVisEvtWithVisEventModel:(Echat_visEvtModel *)model MetaData:(NSString * )metaData Complete:(dispatch_block_t)complete Failure:(dispatch_block_t)failure;
++(void)echat_sendVisEvtWithVisEventModel:(Echat_visEvtModel *)model MetaData:(NSString * )metaData PlatformSign:(NSString * )platformsign Complete:(dispatch_block_t)complete Failure:(dispatch_block_t)failure __attribute__((deprecated("Use -[EchatSDK echat_sendVisEvtWithVisEventModel:Success:] instead")));;
 
 /**
-* @brief 获取服务端未读消息数
+* @brief 发送图文
+* @param model 图文消息模型
+* @param success 成功回调
+* @param fail 失败回调
+*/
++(void)echat_sendVisEvtWithVisEventModel:(Echat_visEvtModel *)model Success:(dispatch_block_t)success Failure:(void(^)(NSString * errorMsg))fail;
+
+/**
+* @brief 获取服务端未读消息数(过期)
 * @param metaData 如果有会员信息需要传入metaData如果没可以传nil
 * @param complete 成功回调
 */
-+(void)echat_getUnReadMsgCountWithMetaData:(NSString * )metaData Complete:(void (^)(NSInteger count))complete;
++(void)echat_getUnReadMsgCountWithMetaData:(NSString * )metaData PlatformSign:(NSString * )platformsign Complete:(void (^)(NSInteger count))complete __attribute__((deprecated("Use -[EchatSDK echat_getUnReadMsgCountComplete:] instead")));
+
+/**
+* @brief 获取服务端未读消息数
+* @param success 成功回调
+* @param fail 失败回调
+*/
++(void)echat_getUnReadMsgCountSuccess:(void (^)(NSInteger count))success failure:(void (^)(NSString * errorMsg))fail;
 
 /**
 * @brief 匿名访客转VIP
@@ -150,6 +172,30 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 * @param myDataStr 额外业务参数
 */
 +(void)echat_registMetaData:(NSString *)metaStr myData:(NSString *)myDataStr;
+
+
+/// vip登陆
+/// @param deviceToken token
+/// @param metaData 会员信息
+/// @param uid 唯一id
+/// @param success 成功回调
+/// @param fail 失败回调
++(void)echat_VIPBindingPushInfo:(NSData *)deviceToken
+                       WithMetaData:(NSString *)metaData
+                                Uid:(NSString *)uid
+                            Success:(dispatch_block_t)success
+                               fail:(void(^)(NSString * errorMessage))fail;
+
+
+/// vip登出
+/// @param deviceToken token
+/// @param uid 唯一id
+/// @param success 成功回调
+/// @param fail 失败回调
++(void)echat_VIPUnbindingPushInfo:(NSData *)deviceToken
+                          WithUid:(NSString *)uid
+                          Success:(dispatch_block_t)success
+                             fail:(void(^)(NSString * errorMessage))fail;
 
 /**
 * @brief 获取当前控制器(Echat用于远程推送点击跳转示例方法)

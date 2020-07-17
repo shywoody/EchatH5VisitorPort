@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/EchatInfo.h</key>
 		<data>
-		dr0CXrp+mwkmpBFn2sNrCACmUV4=
+		2z4RlFnOgAXOsi2gxjNA3nJXNEI=
 		</data>
 		<key>Headers/EchatNavController.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/EchatSDK.h</key>
 		<data>
-		rE9Txd8BjmgCcJGffr9hfnftyeI=
+		62aT6FR5Gtx9fmfZkkw+CXfLzPw=
 		</data>
 		<key>Headers/EchatSubscribeMsgModel.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/EchatViewController.h</key>
 		<data>
-		1l01CpR9d6LNo7efQLXF0fa7v1E=
+		tma08tOke6Tp7KeT1XeM17Svdjk=
 		</data>
 		<key>Headers/EchatVisitorPort.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/Echat_accessConditions.h</key>
 		<data>
-		o15J5KYRD/OTMK+vSvkqsXaewOc=
+		0pTWM6VzEZrF0rIvwPWT2694hw0=
 		</data>
 		<key>Headers/Echat_visEvtModel.h</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TFveQ+xbMKHnMDjOb9y0YLpDYwY=
+		lg5aTo8ENZDfH7MiBH9RQVt/C+g=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -59,11 +59,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dr0CXrp+mwkmpBFn2sNrCACmUV4=
+			2z4RlFnOgAXOsi2gxjNA3nJXNEI=
 			</data>
 			<key>hash2</key>
 			<data>
-			y1N1mmWM4l3FziQtcBAjpm8qTfs0E9TOaD3czow8sJY=
+			4uAqSwEnvk42xftu5w1+nZeD6jJIx1Mj13aGVPD2IQ8=
 			</data>
 		</dict>
 		<key>Headers/EchatNavController.h</key>
@@ -81,11 +81,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rE9Txd8BjmgCcJGffr9hfnftyeI=
+			62aT6FR5Gtx9fmfZkkw+CXfLzPw=
 			</data>
 			<key>hash2</key>
 			<data>
-			MzdvhQ2r1DdJPbL1gWSaZB9ya11lvovJHPOHXhfabpI=
+			wykacc1YNuoGyEJ/WJDMqvOiLOCUcoWk2dzFRhNV9sc=
 			</data>
 		</dict>
 		<key>Headers/EchatSubscribeMsgModel.h</key>
@@ -125,11 +125,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1l01CpR9d6LNo7efQLXF0fa7v1E=
+			tma08tOke6Tp7KeT1XeM17Svdjk=
 			</data>
 			<key>hash2</key>
 			<data>
-			ToRF45MlYSndFqbla5RIvziHjj1l+GDoyr77PrlZVmw=
+			3QBLz4fNeCgfgx0uTUW6G0Mrjvm5JS2394EIjj2vUvI=
 			</data>
 		</dict>
 		<key>Headers/EchatVisitorPort.h</key>
@@ -158,11 +158,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			o15J5KYRD/OTMK+vSvkqsXaewOc=
+			0pTWM6VzEZrF0rIvwPWT2694hw0=
 			</data>
 			<key>hash2</key>
 			<data>
-			gJPdn3SE6QgNcWSwFgcgJWcagBTV2gGVKr/yyyNscPs=
+			T8TNzExWYF7DvUHLjuEhVxppLq4VfJ529gRYN7EkV34=
 			</data>
 		</dict>
 		<key>Headers/Echat_visEvtModel.h</key>

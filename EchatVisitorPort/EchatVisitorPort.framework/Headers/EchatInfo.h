@@ -107,6 +107,7 @@ typedef NS_ENUM (NSInteger, EChatConversationStatus) {
     EchatReconnectChat = 13,
     EchatDisConnect = 14,
     EChatConversationThirdURL = 15,
+    EchatConversationWO = 16,
 };
 
 ///上传文件类型
@@ -151,13 +152,13 @@ dispatch_async(dispatch_get_main_queue(), block);\
 #endif
 
 #define EchatDebug [EchatSDK share].openDebug
-//#ifdef DEBUG
-//#define EchatLog(fmt, ...)  if(EchatDebug) {\
-//NSLog((@"ECHATLOG--> %s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);\
-//}else {}
-//#else
-//#define EchatLog(...)
-//#endif
+#ifdef DEBUG
+#define EchatLog(fmt, ...)  if(EchatDebug) {\
+NSLog((@"ECHATLOG--> %s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);\
+}else {}
+#else
+#define EchatLog(...)
+#endif
 
 #define EchatLog(fmt, ...)  if(EchatDebug) {\
 NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);\
