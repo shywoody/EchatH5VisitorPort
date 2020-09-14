@@ -10,7 +10,6 @@
 #import "Echat_MsgModel.h"
 #import "EchatSubscribeMsgModel.h"
 
-@class EchatWSManager;
 @class EchatViewController;
 @class Echat_accessConditions;
 @class Echat_visEvtModel;
@@ -134,7 +133,6 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 */
 +(void)increaseunReadCountWithEchatNotifyDataJsonString:(NSString *)jsonString andContent:(NSString * )content;
 
-
 /**
 * @brief 发送图文(过期)
 * @param model 图文消息模型
@@ -142,6 +140,8 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 * @param complete 成功回调
 * @param failure 失败回调
 */
++(void)echat_sendVisEvtWithVisEventModel:(Echat_visEvtModel *)model MetaData:(NSString * )metaData Complete:(dispatch_block_t)complete Failure:(dispatch_block_t)failure __attribute__((deprecated("Use -[EchatSDK echat_sendVisEvtWithVisEventModel:Success:] instead")));;
+
 +(void)echat_sendVisEvtWithVisEventModel:(Echat_visEvtModel *)model MetaData:(NSString * )metaData PlatformSign:(NSString * )platformsign Complete:(dispatch_block_t)complete Failure:(dispatch_block_t)failure __attribute__((deprecated("Use -[EchatSDK echat_sendVisEvtWithVisEventModel:Success:] instead")));;
 
 /**
