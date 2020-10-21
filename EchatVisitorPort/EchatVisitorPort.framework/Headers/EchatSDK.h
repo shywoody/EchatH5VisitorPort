@@ -133,6 +133,14 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 */
 +(void)increaseunReadCountWithEchatNotifyDataJsonString:(NSString *)jsonString andContent:(NSString * )content;
 
+
+/// 发送文本
+/// @param msg 内容
+/// @param success 成功回调
+/// @param fail 失败回调
++(void)echat_sendMsg:(NSString *)msg Success:(dispatch_block_t)success Failure:(void(^)(NSString * errorMsg))fail;
+
+
 /**
 * @brief 发送图文(过期)
 * @param model 图文消息模型

@@ -29,7 +29,12 @@
 
 ///图文消息
 @property (nonatomic,strong) Echat_visEvtModel  * visEvt;
-//@property(nonatomic,strong) NSDictionary * visEvt;
+
+///指派接待客服的ID
+@property (nonatomic,copy) NSString * acdStaffId;
+
+///分配优先级，0-优先，1-指派
+@property (nonatomic,copy) NSString * acdType;
 
 ///咨询入口id
 @property (nonatomic,copy) NSString * routeEntranceId;

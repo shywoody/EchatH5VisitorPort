@@ -3,3 +3,6 @@
     min-width: 68px;
     width:auto;
 }
+html body,.msg-item{
+    font-family: "MSPゴシック","MSゴシック","Microsoft Yahei", "Helvetica Neue", "Helvetica", "Arial", sans-serif,STHeiti, FangSong, "echat-vs"; 
+}
