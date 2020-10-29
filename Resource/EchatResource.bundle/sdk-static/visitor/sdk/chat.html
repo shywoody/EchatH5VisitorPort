@@ -2303,6 +2303,7 @@ body .tiphide{
 .sa-title-content {
     flex: 0 0 auto;
     padding: 0 20px;
+    max-width: 70%;
 }
 .sa-title-left,.sa-title-right{
     width:40px;
@@ -2754,6 +2755,7 @@ body .router-item-content1 .router-item-icon{
 }
 .site-iframe{
     height: 90%;
+    height: calc(100% - 40px);
     width: 100%;
     /*-webkit-transform: translate3d(0,100%,0);*/
     border:0;
@@ -2772,7 +2774,7 @@ body .router-item-content1 .router-item-icon{
 }
 .ios .site-iframe{
     margin-top:40px;
-    height:3500px;
+    /* height:3500px; */
     width:1px;
     min-width: 100%;
 }
@@ -4480,6 +4482,8 @@ div.msg-video-poster{
                     ko: "../common/lang/langko.js",
                     zhtw: "../common/lang/langzhtw.js",
                     pt: "../common/lang/langpt.js",
+                    in: __uri("../common/lang/langid.js"),//印尼兼容
+                    id: __uri("../common/lang/langid.js")//印尼
                 }
                 function getSupportLan(lang) {
                     if (!lang) return '';
