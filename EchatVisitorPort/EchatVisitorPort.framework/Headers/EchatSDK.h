@@ -183,24 +183,28 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 
 
 /// vip登陆
-/// @param deviceToken token
+/// @param pushInfo pushInfo,若使用一洽推送服务端代为推送消息 此处将获得的deviceToken作为Pushinfo
+/// @param takingover 若使用一洽推送服务端代为推送消息需要标识Yes
 /// @param metaData 会员信息
 /// @param uid 唯一id
 /// @param success 成功回调
 /// @param fail 失败回调
-+(void)echat_VIPBindingPushInfo:(NSData *)deviceToken
-                       WithMetaData:(NSString *)metaData
-                                Uid:(NSString *)uid
-                            Success:(dispatch_block_t)success
-                               fail:(void(^)(NSString * errorMessage))fail;
++(void)echat_VIPBindingPushInfo:(NSString *)pushInfo
+              isEchatTakingOver:(BOOL)takingover
+                   WithMetaData:(NSString *)metaData
+                            Uid:(NSString *)uid
+                        Success:(dispatch_block_t)success
+                           fail:(void(^)(NSString * errorMessage))fail;
 
 
 /// vip登出
-/// @param deviceToken token
+/// @param pushInfo pushInfo,若使用一洽推送服务端代为推送消息 此处将获得的deviceToken作为Pushinfo
+/// @param takingover 若使用一洽推送服务端代为推送消息需要标识Yes
 /// @param uid 唯一id
 /// @param success 成功回调
 /// @param fail 失败回调
-+(void)echat_VIPUnbindingPushInfo:(NSData *)deviceToken
++(void)echat_VIPUnbindingPushInfo:(NSString *)pushInfo
+                isEchatTakingOver:(BOOL)takingover
                           WithUid:(NSString *)uid
                           Success:(dispatch_block_t)success
                              fail:(void(^)(NSString * errorMessage))fail;

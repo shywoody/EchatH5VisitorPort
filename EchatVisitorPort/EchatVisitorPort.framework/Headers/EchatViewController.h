@@ -18,8 +18,10 @@ typedef void(^VisEvtCallBack)(NSString * data);
 @property(nonatomic,copy) NSString * leftItemImageName;///leftItemImageName
 @property(nonatomic,copy) NSString * rightItemImageName;///rightItemImageName
 
+///默认为YES,控制器内部设置了Navigation左右item,分别为返回和对话关闭功能按钮
+@property(nonatomic, assign) BOOL defaultNavigationItemVisualable;
 
-//自定义地图控制器
+///自定义地图控制器
 @property(nonatomic,strong) UIViewController *  mapLoaderViewController;
 
 ///自定义图库控制器
@@ -101,9 +103,14 @@ typedef void(^VisEvtCallBack)(NSString * data);
 -(void)startOtherRouteChat:(NSString *)echatTag;
 
 /**
-* @brief 控制器返回
+* @brief 控制器返回,当在聊天页面时候默认设置naviBarLeftItem为页面返回按钮执行此方法,defaultNavigationItemVisualable为NO时可以自己定义naviBarItem去调用此返回方法
 */
 -(void)back;
+
+/**
+* @brief 控制器结束对话,当在聊天页面时候默认设置naviBarRightItem为关闭对话按钮执行此方法,defaultNavigationItemVisualable为NO时可以自己定义naviBarItem去调用此关闭对话方法
+*/
+-(void)endConversation;
 
 /**
 * @brief 关闭当前对话
