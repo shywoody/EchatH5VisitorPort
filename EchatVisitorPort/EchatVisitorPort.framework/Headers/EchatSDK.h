@@ -48,7 +48,7 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 
 
 /**
-* @brief 上传gif
+* @brief 关闭地理位置信息功能
 * @param isOpen 是否关闭位置信息功能,需要引用EchatCommen和引入高德地图
 */
 +(void)echat_OpenDefaultLocationFunction:(BOOL)isOpen;
