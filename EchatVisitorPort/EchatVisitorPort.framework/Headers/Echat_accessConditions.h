@@ -12,7 +12,7 @@
 ///会员数据参数
 @property (nonatomic,copy) NSString  * metaData;
 
-///唯一标识,传入metaData一定要传Uid和metaData对应
+///唯一标识,解除绑定会员绑定需要传递
 @property (nonatomic,copy) NSString * uid;
 
 ///自定义扩展参数
