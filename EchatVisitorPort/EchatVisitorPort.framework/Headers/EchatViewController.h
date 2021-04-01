@@ -107,10 +107,6 @@ typedef void(^VisEvtCallBack)(NSString * data);
 */
 -(void)back;
 
-/**
-* @brief 控制器结束对话,当在聊天页面时候默认设置naviBarRightItem为关闭对话按钮执行此方法,defaultNavigationItemVisualable为NO时可以自己定义naviBarItem去调用此关闭对话方法
-*/
--(void)endConversation;
 
 /**
 * @brief 关闭当前对话
