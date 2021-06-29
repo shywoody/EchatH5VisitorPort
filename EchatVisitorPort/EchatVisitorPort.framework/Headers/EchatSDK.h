@@ -209,6 +209,17 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
                           Success:(dispatch_block_t)success
                              fail:(void(^)(NSString * errorMessage))fail;
 
+
+/// 自主上传获取uploadInfo
+/// @param fileType 文件类型-1语音、2视频、4图片、0其他
+/// @param duration 语音时长(是语音文件传入, 单位：ms)
+/// @param success 成功信息回调
+/// @param fail 失败回调
++ (void)echat_getFileUploadInfoWithFileType:(NSInteger)fileType
+                          haveVoiceduration:(NSNumber *)duration
+                                    Success:(void (^)(NSDictionary * info))success
+                                    failure:(void (^)(NSString * errorMsg))fail;
+
 /**
 * @brief 获取当前控制器(Echat用于远程推送点击跳转示例方法)
 * @return 返回控制器
