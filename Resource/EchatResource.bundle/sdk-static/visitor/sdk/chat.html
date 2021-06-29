@@ -3,7 +3,7 @@
 <head>
     <title>&#xe7d4;</title>
     <meta http-equiv="Content-type" content="text/html;charset=utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -670,10 +670,26 @@ div .entry2-input-code{
     width: 300px;
     height: 270px;
 }
+
+.order-complete-auto{
+    color: #656882;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+}
+
+.order-complete-auto .tip1 {
+    font-size: 16px;
+    margin-top: 12px;
+    font-weight: bold;
+}
 .order-complete img{
     width: 160px;
     height: 160px;
-    margin-top:38%;
 }
 .order-complete .tip1 {
     margin-top: 12px;
@@ -681,6 +697,10 @@ div .entry2-input-code{
 }
 .order-complete .tip2 {
     margin-bottom: 18px;
+}
+.order-initPosition {
+    top: 0 !important;
+    left: 0 !important;
 }
 </style>
     <style>
@@ -821,27 +841,30 @@ div.color1,.list-his-hr.color1 {
 }
 /*机器人 已解决按钮*/
 .feedback-btn-solve{
-
+    visibility: visible;
 }
 .feedback-btn-unsolve{
-
-}.feedback-btn-solve-sel{
-
+    visibility: visible;
+}
+.feedback-btn-solve-sel{
+    visibility: visible;
  }
 .feedback-btn-unsolve-sel{
-
+    visibility: visible;
 }
 .sub-solved-li{
-
+    visibility: visible;
 }
 .sub-unsolved-li{
-
+    visibility: visible;
 }
 /*已解决*/
 .feedback-sub-sel1{
+    visibility: visible;
 }
 /*未解决*/
 .feedback-sub-sel2{
+    visibility: visible;
 }
 /*
 @font-face {font-family: "echat-sdk";
@@ -886,7 +909,41 @@ h1, h2 {
 body {
     position: relative;
     -webkit-overflow-scrolling:auto;
+    text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
 }
+/*顶部需要留出距离的*/
+/* .page,.container,.entry-wrap,.entry-leave,.header{ 为导航栏+状态栏的高度 88px*/
+/*顶部需要留出距离的 目前没有，都有程序处理*/
+/* .container{
+    margin-top: constant(safe-area-inset-top);   
+    margin-top: env(safe-area-inset-top);  
+} */
+/* .page,.footer,.entry-wrap,.entry-leave.verify,.satisfy { */
+/*底部需要留出距离的 目前也都有程序处理，暂时没有*/
+.page,.footer,.satisfy {
+    margin-bottom: constant(safe-area-inset-bottom);/*为底下圆弧的高度 34px       */
+    margin-bottom: env(safe-area-inset-bottom);/*为底下圆弧的高度 34px       */   
+}
+/*左右需要留出距离的*/
+.header,.footer{
+    box-sizing: border-box;
+    padding-left: constant(safe-area-inset-left);   /*如果未竖屏时为0                */
+    padding-left: env(safe-area-inset-left);   /*如果未竖屏时为0                */
+    padding-right: constant(safe-area-inset-right); /*如果未竖屏时为0                */
+    padding-right: env(safe-area-inset-right); /*如果未竖屏时为0                */
+    overflow-x: visible;
+}
+/*左右需要留出距离的*/
+.container,.satisfy {
+    margin-left: constant(safe-area-inset-left);   /*如果未竖屏时为0                */
+    margin-left: env(safe-area-inset-left);   /*如果未竖屏时为0                */
+    margin-right: constant(safe-area-inset-right); /*如果未竖屏时为0                */
+    margin-right: env(safe-area-inset-right); /*如果未竖屏时为0                */
+}
+
 input,textarea{
     font-family:inherit;
     outline:none;
@@ -1633,6 +1690,8 @@ a,a:hover,a:active,a:visited,a:focus{
     /*padding: 10px;*/
     /*display: inline;*/
     max-width: 100%;
+    border-width: 1px;
+    border-style: solid;
 }
 .msg-lf {
     padding-left: 16px;
@@ -1730,9 +1789,10 @@ a,a:hover,a:active,a:visited,a:focus{
     background: #f74e1b;
 }
 .file-icon::before{
-    content:"\e613";
+    content:"\e61d";
     color:rgb(255, 205, 44);
     font-size: 44px;
+    
 }
 .file-load-bar{
     font-size:1.2rem;
@@ -1805,8 +1865,13 @@ a,a:hover,a:active,a:visited,a:focus{
     max-width: 100%;
     overflow: hidden;
     padding:10px 14px;
+    white-space: pre-wrap;
 }
 .msg-item img {
+    max-width: 100%;
+}
+
+.msg-item video{
     max-width: 100%;
 }
 /*发送失败图标*/
@@ -1874,6 +1939,12 @@ a,a:hover,a:active,a:visited,a:focus{
     margin:10px 0 15px;
     color:#ffffff;
     background: #BFBFBF;
+}
+
+.msg-item img, .msg-img {
+    max-width: 100%;
+    max-height: 200px;
+    vertical-align: bottom;
 }
 /*客服信息*/
 .portrait {
@@ -2786,7 +2857,7 @@ body .router-item-content1 .router-item-icon{
     position: absolute;
     top: 0px;
     width: 100%;
-    z-index: 15;
+    z-index: 5;
     overflow: auto;
     max-height: 90%;
     box-shadow:-4px 4px 7px rgba(0,0,0,0.2);
@@ -3172,6 +3243,15 @@ div .msg .push-url,.unread .unread-msg .push-url{
     height:56px;
     text-align: center;
 }
+.pushform-icon {
+    float:left;
+    width: 54px;
+    height:56px;
+}
+.pushform-icon > img {
+    width: 100%;
+    height: 100%;
+}
 /*展示链接的图标*/
 .push-icon::before{
     content:"\e65b";
@@ -3182,7 +3262,7 @@ div .msg .push-url,.unread .unread-msg .push-url{
     padding: 2px;
 }
 .push-content{
-    height: 56px;
+    height: 65px;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-left: 58px;
@@ -3193,6 +3273,9 @@ div .msg .push-url,.unread .unread-msg .push-url{
     color:#323232;
     padding:5px 0 6px;
     line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .push-url-link{
     color:rgb(0,0,238);
@@ -3202,6 +3285,14 @@ div .msg .push-url,.unread .unread-msg .push-url{
     text-overflow: ellipsis;
     font-size: 1.2rem;
     height:20px;
+}
+.pushform-desc {
+    font-size: 12px;
+    color: #ccc;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
 }
 .push-url:hover .push-url-link{
     text-decoration: underline;
@@ -3584,6 +3675,8 @@ body .height0{
     line-height: 18px;
     height:18px;
     vertical-align: middle;
+    white-space: nowrap;
+    word-break: keep-all;
 }
 .msg-leave-i{
     display: inline-block;
@@ -3603,6 +3696,14 @@ body .height0{
     display: inline-block;
     vertical-align: middle;
 }
+.msg-leave-name{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: keep-all;
+    vertical-align: middle;
+}
 .msg-leave-content{
     width: 100%;
     box-sizing: border-box;
@@ -3611,7 +3712,7 @@ body .height0{
     height: 24px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space:nowrap;
+    white-space: pre-wrap;
     word-break: break-all;
     font-size: 1.2rem;
 }
@@ -3968,8 +4069,8 @@ body .height0{
     display: none !important;
 }
 
-/*2图片 3语音 4 视频*/
-.mode3 .msg-con,.mode4 .msg-con,.mode2 .msg-con{
+/*3语音*/
+.mode3 .msg-con{
     border:none;
 }
 .mode3 .msg-item,.mode4 .msg-item,.mode2 .msg-item,.mode1 .msg-item{
@@ -3994,6 +4095,13 @@ body .height0{
  .msg-media.msg-imgs{
     min-width: 50px;
     min-height: 36px;
+}
+.msg-videotag{
+    width: 120px;
+    height: 90px;
+}
+.msg-videotag video{
+    opacity: 0;
 }
 .msg-media{
     position: relative;
@@ -4142,6 +4250,7 @@ div.msg-video-poster{
     border-width:6px 0 6px 12px;
     border-color:transparent transparent transparent #fff;
     border-style: solid;
+    font-size: 0; 
 }
 .msg-video .msg-preview-progress {
     margin-top:18px;
@@ -4311,6 +4420,42 @@ div.msg-video-poster{
     line-height: 14px;
     color: #fff;
     font-size: 12px;
+}
+
+/*表单的链接框*/
+.form-link-box {
+    width: 220px;
+    height: auto;
+    margin: 0 auto;
+    background-color: #FFF;
+    /* border-width: 1px;
+    border-style: solid; */
+    border-radius: 5px;
+    padding: 10px;
+    display: block;
+    text-decoration: none !important;
+}
+
+.form-content {
+    background-color: unset;
+    height: 56px;
+    margin-left: 60px;
+    padding: 0 8px;
+}
+
+.form-name {
+    color: #323232;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.form-status {
+    text-align: center;
+    margin-top: 8px;
+    padding: 3px;
+    border-radius: 3px;
 }
 
 </style>
@@ -4490,7 +4635,7 @@ div.msg-video-poster{
                     var path = lang.replace('-', ''),
                         usePath = '',   //空就是没有找到转换匹配的语言
                         langPf = lang.split('-')[0],
-                        langMap = { zhhk: 'zhtw', zhmo: 'zhtw', zhcht: 'zhtw', zhsg: 'zhcn', jp: 'ja' };
+                        langMap = { zhhk: 'zhtw', zhmo: 'zhtw', zhcht: 'zhtw',zhhant: 'zhtw', zhsg: 'zhcn', jp: 'ja' };
                     if (!supportLang[path]) {
                         if (langMap[path]) {//不支持的，找转换列表的
                             usePath = langMap[path];
