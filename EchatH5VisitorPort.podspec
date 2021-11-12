@@ -127,6 +127,11 @@ abdasdlwmas;ldkal;dksf;laksfoekfadfas;lasdfjafsa
   spec.libraries = "stdc++", "z","c++","icucore","sqlite3"
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
+  
+  spec.pod_target_xcconfig = {
+        'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+    }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
