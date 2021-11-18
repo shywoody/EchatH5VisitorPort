@@ -39,5 +39,7 @@
 ///咨询入口id
 @property (nonatomic,copy) NSString * routeEntranceId;
 
+///访客第一条带入消息
+@property (nonatomic,strong) NSDictionary * fm;
 
 @end
