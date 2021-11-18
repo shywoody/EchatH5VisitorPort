@@ -21,8 +21,10 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 
 
 @interface EchatSDK : NSObject
-@property(nonatomic,readonly,assign) BOOL openDebug;
-@property(nonatomic,assign) double tm;
+@property(nonatomic,assign,readonly) BOOL openDebug;
+
+/// 是否开启对话页面消息复制功能（默认开启）
+@property(nonatomic,assign) BOOL open_ChatCopyFunction;
 
 
 +(instancetype)share;
