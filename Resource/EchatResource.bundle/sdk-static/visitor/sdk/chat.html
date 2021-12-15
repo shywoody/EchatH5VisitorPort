@@ -345,6 +345,7 @@ div .entry2-input-code{
 .entry2-checkbox{
     display: inline-block;
     margin:0 2rem 0.4rem 0;
+    word-break: break-all;
 }
 .entry2-checkbox input{
     margin:0;
@@ -3298,12 +3299,12 @@ div .msg .push-url,.unread .unread-msg .push-url{
     text-decoration: underline;
 }
 /** 滚动条 */
-/* *::-webkit-scrollbar { -webkit-appearance: none;width: 1px; height:6px;}
+*::-webkit-scrollbar { -webkit-appearance: none;width: 1px; height:6px;}
 *::-webkit-scrollbar-button { display: none }
 *::-webkit-scrollbar-track { background: transparent; }
 *::-webkit-scrollbar-thumb { min-height: 2rem;background: #cbcbcb;background-clip: padding-box;border-radius: 5px }
 *::-webkit-scrollbar-thumb:hover { background-color: #cbcbcb; }
-*::-webkit-scrollbar-thumb:active { background-color: #cbcbcb; } */
+*::-webkit-scrollbar-thumb:active { background-color: #cbcbcb; }
 /*提示框*/
 .dialog{
     position: fixed;
@@ -3362,6 +3363,10 @@ div .msg .push-url,.unread .unread-msg .push-url{
     line-height:20px;
     padding:30px 20px 30px;
     text-align: center;
+    max-height: 260px;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: auto;
 
 }
 .dialog-btns{
@@ -3815,7 +3820,7 @@ body .height0{
 }
 .record-wrap-cancel1,.record-wrap-cancel2{
     padding:7px 5px 0px;
-    line-height: 20px;
+    line-height: 16px;
 }
 .record-wrap-cancel2{
     display: none;
@@ -4093,8 +4098,11 @@ body .height0{
 
  .msg-media.msg-video,
  .msg-media.msg-imgs{
-    min-width: 50px;
-    min-height: 36px;
+     /*有的缩略图确实很小，这里的最小尺寸需要做小一点*/
+    min-width: 20px;
+    min-height: 20px;
+    text-align: center;
+    vertical-align: middle;
 }
 .msg-videotag{
     width: 120px;
@@ -4739,7 +4747,7 @@ div.msg-video-poster{
 </div>
 <div id="chat" class="page bg4">
     <div id="container" class="container">
-        <div id="networkDisconnected" class="toast-network hide">网络异常</div>
+        <div id="networkDisconnected" class="toast-network hide" langs="visitor197">网络异常</div>
         <ul id="innerADWrap" class="toast-innerAD hide"></ul>
 
         <div id="pastePreview" class="paste-pre hide">
@@ -4776,12 +4784,12 @@ div.msg-video-poster{
         <!--输入联想-->
         <div id="input_suggest" class="ipt-suggest hide"></div>
         <!-- <div id="robotToStaff" class="menu-robot-staff"><i class="robot-staff-icon"></i><span id="toHumanWords">如您的问题未被解决,可进入</span><span id="robotToStaffWord" class="bg0" langs="robotToStaff">人工服务</span><i class="robot-staff-close"></i></div> -->
-        <div id="robotToStaff" class="menu-robot-staff hide"><i class="robot-staff-icon echat"></i><span id="toHumanWords" class="menu-robot-word">如您的问题未被解决,可进入</span><span id="robotToStaffWord" class="bg0 menu-robot-btn" langs="robotToStaff">人工服务</span><i class="robot-staff-close echat"></i></div>
-        <div id="busyTipLine" class="menu-robot-staff menu-busy-tip"><i class="robot-staff-icon echat"></i><span id="busyTip" class="menu-robot-word">客服忙</span><i class="robot-staff-close echat"></i></div>
+        <div id="robotToStaff" class="menu-robot-staff hide"><i class="robot-staff-icon echat"></i><span id="toHumanWords" class="menu-robot-word" langs="visitor198">如您的问题未被解决,可进入</span><span id="robotToStaffWord" class="bg0 menu-robot-btn" langs="robotToStaff">人工服务</span><i class="robot-staff-close echat"></i></div>
+        <div id="busyTipLine" class="menu-robot-staff menu-busy-tip"><i class="robot-staff-icon echat"></i><span id="busyTip" class="menu-robot-word" langs="visitor199">客服忙</span><i class="robot-staff-close echat"></i></div>
         <div id="leaveBar" class="leave-bar leave-bar-btn bg0" langs="leaveToChatBtn"></div>
         <div id="chat_text" class="input flex">
             <div class="record-switch icon-record echat limit-hide"></div>
-            <div class="btn-record flex1">按住&nbsp;&nbsp;说话</div>
+            <div class="btn-record flex1" langs="visitor193">按住&nbsp;&nbsp;说话</div>
             <textarea class="flex1 radius4" id="textInput" placeholder="请输入..." langs="textareaInput"></textarea>
             <div class="menu-emo" id="menu_emotion" type="emotion" title="表情" langs="emotion">
                 <div class="menu-item-icon echat"></div>
@@ -4855,7 +4863,7 @@ div.msg-video-poster{
 </div>
 <!-- 留言禁用 -->
 <div id="leaveDisabled" class="leave-disabled-pop">
-    <div class="leave-disabled-tip">禁止留言提示</div>
+    <div class="leave-disabled-tip" langs="visitor200">禁止留言提示</div>
 </div>
 
 <div style="position: absolute;top:-100px;z-index: -10;">
@@ -4876,8 +4884,8 @@ div.msg-video-poster{
             <div class="record-wrap-icon echat"></div>
         </div>
     </div>
-    <div class="record-wrap-cancel1">手指上滑,取消发送</div>
-    <div class="record-wrap-cancel2"><span>松开手指,取消发送</span></div>
+    <div class="record-wrap-cancel1" langs="visitor195">手指上滑,取消发送</div>
+    <div class="record-wrap-cancel2"><span langs="visitor196">松开手指,取消发送</span></div>
 </div>
 
 <script>
