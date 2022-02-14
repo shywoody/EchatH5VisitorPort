@@ -98,6 +98,9 @@ img{
 ul, li {
     list-style-type: none;
 }
+ol, ol li {
+    padding-left: 0;
+}
 i {
     font-style: normal
 }
@@ -2149,7 +2152,7 @@ and (max-device-width : 400px){
     max-height:30px;
 }
 .verify-change::before{
-    content: "\e62a";
+    content: "\e62d";
 }
 #verify_change{
     /* font-size: 24px;这个是给字体图标的？ */
@@ -3529,12 +3532,13 @@ body .has-fade{
 .url-list,.emotion{
     opacity: 1;
     border-top:1px solid #DDD;
-    -webkit-transition: opacity 500ms ease-in-out; /* Safari 和 Chrome */
-    transition: opacity 500ms ease-in-out;
+    -webkit-transition: opacity 400ms ease-in-out; /* Safari 和 Chrome */
+    transition: opacity 400ms ease-in-out;
 }
 .footer .ani-hide{
     opacity: 0;
-    z-index:10;
+    /* z-index:10; 这个会造成动画过程中点击了到了这个透明的层*/
+    z-index: 0;
 }
 .url-list-wrap{
     position: relative;
@@ -4466,6 +4470,73 @@ div.msg-video-poster{
     border-radius: 3px;
 }
 
+
+/*Url设置*/
+.menu-uslSet {
+    /* display: none; */
+    padding: 5px 12px;
+    /* font-family: 'echat-vs'; */
+    position: relative;
+    white-space: nowrap;
+    height: 34px;
+    box-sizing: border-box;
+}
+.menu-uslSet .menu-uslSet-box {
+    overflow: hidden;
+    position: absolute;
+    -moz-transition: all 500ms; /* Firefox 4 */
+    -webkit-transition: all 500ms; /* Safari 和 Chrome */
+    -o-transition: all 500ms; /* Opera */
+    -ms-transition: all 500ms; /* Opera */
+    transition: all 500ms;
+    left: 12px;
+    -webkit-user-select:none;
+   -moz-user-select:none;
+   -ms-user-select:none;
+   user-select:none;
+   cursor: grab;
+}
+.transition-none{
+    transition:none !important;
+    pointer-events:none;
+}
+.menu-uslSet .uslSetSpan {
+    display: inline-block;
+    padding: 3px 8px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    color: #888;
+    font-size: 12px;
+    text-decoration: none;
+    margin-right: 15px;
+    cursor: grab;
+}
+.menu-uslSet .reg {
+    width: 15px;
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 34px;
+    border-right: 1px solid #eee;
+    background-color: #FFF;
+    cursor: pointer;
+    z-index: 99;
+    display: none;
+}
+.menu-uslSet .left-reg {
+    left: 0;
+}
+.menu-uslSet .right-reg {
+    right: 0;
+}
+.rotate-180{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
 </style>
     <!-- inject:json -->
     <script type="text/javascript" src="../../res/emoji/emoji.json"></script>
@@ -4787,6 +4858,12 @@ div.msg-video-poster{
         <div id="robotToStaff" class="menu-robot-staff hide"><i class="robot-staff-icon echat"></i><span id="toHumanWords" class="menu-robot-word" langs="visitor198">如您的问题未被解决,可进入</span><span id="robotToStaffWord" class="bg0 menu-robot-btn" langs="robotToStaff">人工服务</span><i class="robot-staff-close echat"></i></div>
         <div id="busyTipLine" class="menu-robot-staff menu-busy-tip"><i class="robot-staff-icon echat"></i><span id="busyTip" class="menu-robot-word" langs="visitor199">客服忙</span><i class="robot-staff-close echat"></i></div>
         <div id="leaveBar" class="leave-bar leave-bar-btn bg0" langs="leaveToChatBtn"></div>
+         <!--文字图标列表-->
+         <div id="urlSetList" class="menu-uslSet hide">
+            <span class="reg left-reg">&#xe628;</span>
+            <span class="reg right-reg rotate-180">&#xe628;</span>
+            <div id="urlSetListBox" class="menu-uslSet-box"></div>
+        </div>
         <div id="chat_text" class="input flex">
             <div class="record-switch icon-record echat limit-hide"></div>
             <div class="btn-record flex1" langs="visitor193">按住&nbsp;&nbsp;说话</div>

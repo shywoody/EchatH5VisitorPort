@@ -17,6 +17,7 @@ typedef NS_OPTIONS(NSUInteger, EchatSubscribeMsgType){
 @interface EchatSubscribeMsgModel : NSObject
 @property(nonatomic,copy) NSString * title;
 @property(nonatomic,copy) NSString * content;
+@property(nonatomic, assign) NSInteger position;
 @property(nonatomic,assign) EchatSubscribeMsgType type;
 @end
 
