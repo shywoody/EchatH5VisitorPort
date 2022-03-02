@@ -107,6 +107,11 @@ typedef void(^VisEvtCallBack)(NSString * data);
 */
 -(void)back;
 
+/**
+* @brief 控制器右侧固定按钮,结束当前对话,defaultNavigationItemVisualable为NO时可以自己定义naviBarItem去调用此返回方法(需要进入到页面中进行结束)
+*/
+-(void)endConversation;
+
 
 /**
 * @brief 关闭当前对话
