@@ -1867,7 +1867,7 @@ a,a:hover,a:active,a:visited,a:focus{
 .msg-item {
     word-wrap: break-word;
     max-width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding:10px 14px;
     white-space: pre-wrap;
 }
@@ -4537,6 +4537,34 @@ div.msg-video-poster{
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
 }
+.link-longtap{
+    position: relative;
+    background: rgba(0,0,238,0.2);
+}
+.link-longtap-copy {
+    position: absolute;
+    z-index: 1;
+    top: -54px;
+    left: 50%;
+    margin-left: -20px;
+    background: #FFF;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #323232;
+    word-break: keep-all;
+    white-space: nowrap;
+    box-shadow: 0px 0px 4px 0px #ccc;
+}
+.link-longtap-copy::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px 6px 0;
+    border-style: solid;
+    border-color: #FFF transparent;
+}
 </style>
     <!-- inject:json -->
     <script type="text/javascript" src="../../res/emoji/emoji.json"></script>
@@ -4949,6 +4977,7 @@ div.msg-video-poster{
     <iframe id="downFile" name="downFile" style="display:none;"></iframe>
     <!-- iosapi -->
     <iframe id="apiFrame" name="apiFrame" style="display:none;"></iframe>
+    <textarea id="copytemp"></textarea>
 </div>
 <div class="record-wrap">
     <div class="record-wrap-icons">

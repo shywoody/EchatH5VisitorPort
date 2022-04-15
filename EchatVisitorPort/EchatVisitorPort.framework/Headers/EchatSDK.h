@@ -56,6 +56,9 @@ typedef void(^SubscribeMsgCountBlock)(EchatSubscribeMsgModel * model);
 +(void)echat_OpenDefaultLocationFunction:(BOOL)isOpen;
 
 
+/// 是否开启高级隐私权限（这样不会保存多媒体到相册同时也不会访问相册功能,但需要满足版本大于iOS11）
++(void)echat_openHighPrivacy;
+
 /**
 * @brief 远程推送注入token
 * @param deviceToken 如果需要Echat来推送未读消息需要调用该方法传入Token
