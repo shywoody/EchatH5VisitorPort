@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "EchatH5VisitorPort"
-  spec.version      = "1.1.3.9"
+  spec.version      = "1.1.4.0"
   spec.summary      = "be happy,my friend"
 
   # This description is used to generate tags and improve search results.
