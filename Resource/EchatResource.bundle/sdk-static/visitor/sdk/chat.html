@@ -46,7 +46,8 @@
 :root,#html_input,.pre-input,#textInput,
 #fakeInput,.video-js,input,textarea,
 html, body{
-    font-family:"Microsoft Yahei", "Helvetica Neue", "Helvetica", "Arial", sans-serif, STHeiti, FangSong, echat-vs; 
+    /*Roboto pos厂商使用的Google免费字体*/
+    font-family:"Microsoft Yahei", "Helvetica Neue", "Helvetica", "Arial", sans-serif, STHeiti, FangSong, Roboto, echat-vs; 
 }
 html, body {
     width: 100%;
@@ -131,6 +132,23 @@ i {
 }
 /*表情在IE8不显示*/
 .content .img-emo{width:2rem;height:2rem;max-width:3rem;}
+
+/*未读消息条目*/
+.unreadline .hr-left2{
+    flex: 1;
+    background: linear-gradient(to right,#fff 0%,#FFA71E 40%, #FFA71E 100%);
+}
+
+.unreadline .hr-right2{
+    flex: 1;
+    background: linear-gradient(to left,#fff 0%,#FFA71E 40%, #FFA71E 100%);
+}
+
+div .unreadline{
+    color:#FFA71E ;
+    display: flex;
+    align-items: center;
+}
 </style>
     <style>
 /*高级信息收集*/
@@ -179,7 +197,7 @@ html.entry2,.entry2 body{
     font-size: 1.4rem;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    background: #fff;
+    /* background: #fff;  ios entry2-bg 显示不出来*/
     /* -webkit-transform: translateZ(0); */
 }
 
@@ -558,6 +576,7 @@ div .entry2-input-code{
     display: inline-block;
     font-size: 14px;
     font-style: normal;
+    font-family: auto;
 }
 .load .orderfile-progress-num::after {
     content: '';
@@ -633,6 +652,7 @@ div .entry2-input-code{
     line-height: 20px;
     bottom: 0;
     left: 0;
+    font-family: auto;
 }
 .orderfile-size{
     color: #ccc;
@@ -1045,8 +1065,8 @@ and (max-device-width : 1024px) {
     position: absolute;
     top: 50%;
     left: 50%;
-    right: 0;
-    bottom: 0;
+    right: auto;
+    bottom: auto;
     visibility: hidden;
 }
 .loading-wrap{
@@ -4593,14 +4613,18 @@ div.msg-video-poster{
             (function getVisitorInfo() {
                 window.setVisitorInfo = function (params) {
                     console.log('setVisitorInfo', params)
-                    if (!params.companyId || !params.visitorId) {
+                    if (!params.companyId /* || !params.visitorId */) {
                         return;
                     }
                     params = typeof params == 'string' ? JSON.parse(params) : params;
                     if (window.view && window.view.chat && window.view.chat.paramChat) {
+                        
                         //chathandle先初始化了 直接赋值
                         for (var key in params) {
-                            view.chat.paramChat[key] = params[key];
+                            if (params[key]) {
+                                // 避免赋值成空
+                                view.chat.paramChat[key] = params[key];
+                            }
                         }
                         //拿eventId参数
                         try {
